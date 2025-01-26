@@ -36,7 +36,7 @@
 }
 
 .filter-button:hover {
-  background-color: #fe9e88;
+  background-color: #0b3527;
   color: #ffffff;
   transform: scale(1.1);
 }
@@ -50,6 +50,7 @@
 }
 
 .menu-grid::-webkit-scrollbar {
+  display: none;
   height: 10px; /* Height of the scrollbar */
 }
 
