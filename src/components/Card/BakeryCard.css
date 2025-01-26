@@ -1,0 +1,119 @@
+/* .bakery-card {
+    position: relative;
+    width: 250px;
+    height: 300px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .bakery-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  }
+  
+  .bakery-card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .bakery-card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .bakery-card:hover .bakery-card-overlay {
+    opacity: 1;
+  }
+  
+  .bakery-card-overlay h3 {
+    font-size: 1.5rem;
+    margin: 0;
+  }
+  
+  .bakery-card-overlay p {
+    font-size: 1.2rem;
+    margin: 5px 0 0;
+  }
+   */
+
+   /* BakeryCard.css */
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+}
+
+.card-box {
+  position: relative;
+  width: 260px;
+  height: 220px;
+  background-color: #FFF9E7;
+  border-radius: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  /* padding: 20px 10px; */
+  overflow: visible;
+}
+
+.card-image {
+  position: absolute;
+  /* background-color: black; */
+  top: -50px;
+  transform: translateX(-50%);
+  width: 220px;
+  height: 150px;
+  object-fit: cover;
+  /* background-color: #ffffff; */
+}
+
+.card-content {
+  margin-top: 120px; /* Adjusted to leave space for the image */
+}
+
+.card-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #0b3527;
+  margin-bottom: 10px;
+}
+
+.card-price {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.order-button {
+  position: absolute;
+  bottom: -25px;
+  transform: translateX(-50%);
+  padding: 12px 44px;
+  background-color: #AB5323;
+  color: #ffffff;
+  border: none;
+  border-radius: 24px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.order-button:hover {
+  transform: translateX(-50%) scale(1.1);
+}

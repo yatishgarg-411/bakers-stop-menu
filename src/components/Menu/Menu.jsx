@@ -1,49 +1,86 @@
+// import React from 'react';
+// import BakeryCard from '../Card/BakeryCard';
+// import './Menu.css';
+
+// const items = [
+//   { id: 1, image: '/images/cupcake.jpg', name: 'Cupcake', price: 4.99 },
+//   { id: 2, image: '/images/muffin.jpg', name: 'Muffin', price: 3.49 },
+//   { id: 3, image: '/images/croissant.jpg', name: 'Croissant', price: 5.99 },
+//   { id: 4, image: '/images/donut.jpg', name: 'Donut', price: 2.99 },
+// ];
+
+// const Menu = () => {
+//   return (
+//     <div className="menu">
+//       <h2 className="section-title_title">OUR PRODUCTS</h2>
+//       <div className="menu-grid">
+//         {items.map((item) => (
+//           <BakeryCard
+//             key={item.id}
+//             image={item.image}
+//             name={item.name}
+//             price={item.price}
+//           />
+//         ))}
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default Menu;
 import React, { useState } from 'react';
-import './Menu.css'
+import BakeryCard from '../Card/BakeryCard';
+import './Menu.css';
+
+const items = [
+  { id: 1, image: '/images/cupcake.jpg', name: 'Cupcake', price: 4.99, category: 'Cupcake' },
+  { id: 2, image: '/images/muffin.jpg', name: 'Muffin', price: 3.49, category: 'Muffin' },
+  { id: 3, image: '/pastry.jpeg', name: 'Croissant', price: 5.99, category: 'Pastry' },
+  { id: 4, image: '/images.jpeg', name: 'Donut', price: 2.99, category: 'Waffle' },
+  { id: 5, image: '/images/tart.jpg', name: 'Tart', price: 6.49, category: 'Tart' },
+  { id: 6, image: '/b.png', name: 'Cake', price: 6.49, category: 'Cake' },
+];
+
+const categories = ['All', 'Cupcake', 'Pastry', 'Muffin', 'Waffle', 'Tart'];
+
 const Menu = () => {
-  const [menuItems] = useState([
-    {
-      id: 1,
-      name: 'Chocolate Croissant',
-      price: '$4.50',
-      image: 'https://images.unsplash.com/photo-1555507036-ab1f4038808a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'
-    },
-    {
-      id: 2,
-      name: 'Sourdough Bread',
-      price: '$6.00',
-      image: 'https://images.unsplash.com/photo-1585478259715-876acc5be8eb?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'
-    },
-    {
-      id: 3,
-      name: 'Blueberry Muffin',
-      price: '$3.50',
-      image: 'https://images.unsplash.com/photo-1587830506148-b5671c85f074?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'
-    },
-    {
-      id: 4,
-      name: 'Apple Pie',
-      price: '$18.00',
-      image: 'https://images.unsplash.com/photo-1621743478914-cc8a86d7e7b5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'
-    }
-  ]);
+  const [selectedCategory, setSelectedCategory] = useState('All');
+
+  const filteredItems =
+    selectedCategory === 'All'
+      ? items
+      : items.filter((item) => item.category === selectedCategory);
 
   return (
-    <div>
-      <section id="menu" className="menu">
-        <h2 className="section-title">Our Menu</h2>
-        <div className="menu-grid">
-          {menuItems.map((item) => (
-            <div key={item.id} className="menu-item">
-              <img src={item.image} alt={item.name} />
-              <div className="menu-item-content">
-                <h3 className="menu-item-title">{item.name}</h3>
-                <p className="menu-item-price">{item.price}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
+    <div className="menu" id="menu1">
+      <h2 className="section-title_title">OUR PRODUCTS</h2>
+
+      {/* Filter Bar */}
+      <div className="filter-bar">
+        {categories.map((category) => (
+          <button
+            key={category}
+            className={`filter-button ${
+              selectedCategory === category ? 'active' : ''
+            }`}
+            onClick={() => setSelectedCategory(category)}
+          >
+            {category}
+          </button>
+        ))}
+      </div>
+
+      {/* Scrollable Menu Grid */}
+      <div className="menu-grid">
+        {filteredItems.map((item) => (
+          <BakeryCard
+            key={item.id}
+            image={item.image}
+            name={item.name}
+            price={item.price}
+          />
+        ))}
+      </div>
     </div>
   );
 };

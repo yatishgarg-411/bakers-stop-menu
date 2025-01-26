@@ -1,53 +1,88 @@
 .menu {
-    padding: 4rem 1rem;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  .section-title {
-    text-align: center;
-    color: var(--primary);
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
-  }
-  
-  .menu-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    padding: 1rem;
-  }
-  
-  .menu-item {
-    background: white;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    transition: transform 0.3s;
-  }
-  
-  .menu-item:hover {
-    transform: translateY(-5px);
-  }
-  
-  .menu-item img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-  }
-  
-  .menu-item-content {
-    padding: 1rem;
-  }
-  
-  .menu-item-title {
-    font-size: 1.2rem;
-    color: var(--primary);
-    margin-bottom: 0.5rem;
-  }
-  
-  .menu-item-price {
-    font-weight: bold;
-    color: var(--text);
-  }
-  
+  padding: 20px;
+  background-color: #ffffff;
+}
+
+.section-title_title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  font-family: 'Montaga', serif;
+  color: #212121;
+}
+
+.filter-bar {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.filter-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #555555;
+  background-color: #ffffff;
+  border: 2px solid #555555;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filter-button.active {
+  background-color: #212121;
+  color: #ffffff;
+}
+
+.filter-button:hover {
+  background-color: #fe9e88;
+  color: #ffffff;
+  transform: scale(1.1);
+}
+
+.menu-grid {
+  display: flex; /* Use flex for horizontal scrolling */
+  gap: 20px; /* Add gaps between cards */
+  overflow-x: auto; /* Enable horizontal scrolling */
+  padding: 10px 0;
+  scroll-behavior: smooth;
+}
+
+.menu-grid::-webkit-scrollbar {
+  height: 10px; /* Height of the scrollbar */
+}
+
+.menu-grid::-webkit-scrollbar-thumb {
+  background-color: #fe9e88; /* Color of the scrollbar thumb */
+  border-radius: 10px;
+}
+
+.menu-grid::-webkit-scrollbar-track {
+  background-color: #f0f0f0; /* Color of the scrollbar track */
+}
+
+.bakery-card {
+  min-width: 200px; /* Minimum width for cards to display well in the scrollable container */
+  background-color: #ffffff;
+  border: 1px solid #f0f0f0;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.bakery-card:hover {
+  transform: scale(1.05);
+}
+
+.bakery-card-image {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.bakery-card-overlay {
+  text-align: center;
+  padding: 10px;
+}

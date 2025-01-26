@@ -1,95 +1,61 @@
-/* Hero Section */
-.hero {
-  height: 100vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
-              url(/public/Background.jpg);
-  background-size: cover;
-  background-position: center;
-  position: relative;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 0 1rem;
-}
-
-/* Hero Content */
-.hero-content h1 {
-  font-size: 3.5rem;
-  margin-bottom: 1rem;
-  font-family: "Dharma Gothic E";
-  font-weight: 300;
-}
-
-.hero-content h2 {
-  font-size: 1.2rem;
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-/* Header Section */
-.hero-header {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 50;
-}
-
-.hero-header nav {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 16px 24px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between; /* Distribute links and logo */
-}
-
-/* Links */
-.nav-link {
-  color: white;
-  text-decoration: none;
-  font-size: 1.1rem;
-  font-weight: 500;
-  transition: color 0.3s ease;
-}
-
-.nav-link:hover {
-  color: #f8d210;
-}
-
-/* Logo */
-.hero-header nav .logo {
-  flex: 1;
-  display: flex;
-  justify-content: center; /* Center the logo horizontally */
-}
-
-.hero-header nav .logo img {
-  height: 80px;
-  width: 80px;
-  object-fit: contain;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .hero-content h1 {
-    font-size: 2.5rem;
+/* Header Styles */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #0b3527;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 50;
+  }
+  
+  /* Navigation Container */
+  nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  /* Logo Container */
+  nav .logo {
+    display: flex;
+    align-items: start;
+    /* gap: 3px; */
+  }
+  
+  nav .logo img {
+    height: 80px;
+    width: 180px;
+    object-fit: contain;
   }
 
-  .hero-content h2 {
-    font-size: 1rem;
+  
+  /* Navigation Links */
+  nav .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 32px;
   }
-
-  .hero-header nav {
-    flex-wrap: wrap;
-    gap: 8px;
+  
+  nav .nav-links a {
+    color: #FFFFFF;
+    text-transform: 'capitalize';
+    font-size: larger;
+    font-weight: 600;
+    transition: color 0.3s ease;
   }
-
-  .hero-header nav .logo img {
-    height: 60px;
-    width: 60px;
+  
+  nav .nav-links a:hover {
+    color: #3182ce; /* Blue color */
   }
-}
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    nav .nav-links {
+      display: none;
+    }
+  }
+  

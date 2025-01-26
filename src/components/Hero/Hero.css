@@ -1,0 +1,33 @@
+.Hero {
+    position: relative;
+    height: 100%;
+    width: 100%; /* Ensures full screen width */
+    /* background: url('/public/back.jpg') no-repeat center center;  */
+
+    background-size: cover;
+    /* position: relative; */
+    /* display: flex; */
+    /* justify-content: flex-end; Aligns content to the right */
+    align-items: center;
+    text-align: center;
+    /* padding-right: 50px; Optional: Adds some spacing from the right edge */
+}
+
+.Hero img {
+    max-width: 100vw;
+    height: auto; /* Maintains aspect ratio */
+    
+    border-radius: 10px; /* Optional: Adds rounded corners to the image */
+}
+.Hero .tagline {
+    margin-top: 0;
+    background-color: #0b3527;
+    height: 75vh;
+    /* flex: 1; Allow the tagline to take half the space */
+    font-family: "Pacifico", cursive;
+    font-size: 90px;
+    font-weight: 700;
+    /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); Add a subtle shadow for elegance */
+    line-height: 1; /* Adjust line height for better readability */
+    /* transform: translateY(-30%);  */
+}

@@ -1,0 +1,119 @@
+.contact-container {
+    z-index: 6;
+    width: 100%;
+    bottom: -235%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: transparent;
+    padding: 0 2rem; /* Adding padding to avoid content touching edges on small screens */
+}
+
+.contact-content {
+    text-align: center;
+}
+
+.contact-title {
+    font-size: 4rem;
+    font-weight: 800;
+    letter-spacing: 0.1rem;
+    margin-bottom: 2rem;
+    color: #FFFFFF;
+}
+
+/* Social icons container */
+.contact-icons {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap; /* Allow icons to wrap on smaller screens */
+}
+
+/* Icon styles */
+.icon {
+    font-size: 6rem;
+    cursor: pointer;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Icon hover effect */
+.icon:hover {
+    transform: scale(1.1);
+}
+
+/* Individual icon color styles */
+.icon.whatsapp {
+    color: #25d366;
+}
+
+.icon.facebook {
+    color: #1877f2;
+}
+
+.icon.instagram {
+    color: #e4405f;
+}
+
+.icon.phone {
+    color: #555;
+}
+
+/* Media Queries for responsive design */
+
+/* For Tablets (min-width: 600px) */
+@media screen and (max-width: 900px) {
+    .contact-title {
+        font-size: 3rem; /* Adjust title font size for medium screens */
+        margin-bottom: 1.5rem; /* Reduce margin */
+    }
+
+    .icon {
+        font-size: 4rem; /* Adjust icon size */
+    }
+}
+
+/* For Small Devices (min-width: 400px) */
+@media screen and (max-width: 600px) {
+    .contact-title {
+        font-size: 2.5rem; /* Adjust title font size for small screens */
+        margin-bottom: 1rem; /* Adjust margin */
+    }
+
+    .icon {
+        font-size: 3.5rem; /* Reduce icon size */
+        margin: 1rem; /* Space out icons */
+    }
+}
+
+/* For Extra Small Devices (min-width: 320px) */
+@media screen and (max-width: 400px) {
+    .contact-container {
+        bottom: -150%; /* Adjust positioning for small devices */
+    }
+
+    .contact-title {
+        font-size: 2rem; /* Further reduce title size */
+        margin-bottom: 1rem; /* Keep margin consistent */
+    }
+
+    .contact-icons {
+        gap: 1.5rem; /* Reduce the gap between icons */
+    }
+
+    .icon {
+        font-size: 3rem; /* Further reduce icon size */
+    }
+}
+
+/* For Larger Screens (min-width: 1200px) */
+@media screen and (min-width: 1200px) {
+    .contact-title {
+        font-size: 5rem; /* Make title larger for wide screens */
+    }
+
+    .icon {
+        font-size: 7rem; /* Increase icon size for large screens */
+    }
+}
