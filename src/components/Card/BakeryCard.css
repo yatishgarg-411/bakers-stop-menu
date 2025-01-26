@@ -63,7 +63,7 @@
   position: relative;
   width: 260px;
   height: 220px;
-  background-color: #FFF9E7;
+  background-color: #fef6f0;
   border-radius: 16px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   text-align: center;
@@ -103,7 +103,7 @@
   bottom: -25px;
   transform: translateX(-50%);
   padding: 12px 44px;
-  background-color: #AB5323;
+  background-color: #0b3527;
   color: #ffffff;
   border: none;
   border-radius: 24px;
